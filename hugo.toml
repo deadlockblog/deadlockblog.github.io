@@ -1,0 +1,63 @@
+baseURL      = "https://deadlockblog.github.io/"
+title        = "Un paranoico profesional"
+languageCode = "es-es"
+theme        = "hello-friend-ng"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  dateform        = "2 Jan 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  homeSubtitle          = "Notas desde el lado paranoico del teclado. Ciberseguridad, pentesting, y el dia a dia de alguien que ve fallos donde otros no miran."
+  disableReadOtherPosts = false
+  enableSharingButtons  = true
+  enableGlobalLanguageMenu = false
+
+  description = "Blog personal de deadlock. Pentesting, auditoria, inteligencia y otras paranoias utiles."
+  keywords    = "ciberseguridad, hacking, pentesting, auditoria, red team, deadlock"
+  images      = [""]
+
+  [params.author]
+    name = "deadlock"
+
+[taxonomies]
+  category = "categorias"
+  tag      = "tags"
+  series   = "series"
+
+[languages]
+  [languages.es]
+    title          = "Un paranoico profesional"
+    keywords       = ""
+    copyright      = "2026 deadlock"
+    readOtherPosts = "Leer otros posts"
+
+  [languages.es.params]
+    subtitle = "Notas desde el lado paranoico del teclado"
+
+    [languages.es.params.logo]
+      logoText     = "deadlock@paranoico:~$"
+      logoHomeLink = "/"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/Deadlock-101"
+
+[[menu.main]]
+  identifier = "posts"
+  name       = "Posts"
+  url        = "/posts"
+
+[[menu.main]]
+  identifier = "tags"
+  name       = "Tags"
+  url        = "/tags"
+
+[[menu.main]]
+  identifier = "about"
+  name       = "whoami"
+  url        = "/about"
