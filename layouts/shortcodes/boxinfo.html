@@ -1,0 +1,32 @@
+<div class="box-info">
+  <div class="box-info-header">
+    {{ if .Get "url" }}<a href="{{ .Get "url" }}" target="_blank" rel="noopener" class="box-info-link">{{ end }}
+    <span class="box-info-name">{{ .Get "name" }}</span>
+    {{ if .Get "url" }}</a>{{ end }}
+    <span class="box-info-badge box-info-{{ .Get "difficulty" | lower }}">{{ .Get "difficulty" }}</span>
+  </div>
+  <div class="box-info-details">
+    <div class="box-info-item">
+      <span class="box-info-label">OS</span>
+      <span class="box-info-value">{{ .Get "os" }}</span>
+    </div>
+    <div class="box-info-item">
+      <span class="box-info-label">Dificultad</span>
+      <span class="box-info-value">{{ .Get "difficulty" }}</span>
+    </div>
+    <div class="box-info-item">
+      <span class="box-info-label">Puntos</span>
+      <span class="box-info-value">{{ .Get "points" | default "30" }}</span>
+    </div>
+    <div class="box-info-item">
+      <span class="box-info-label">Fecha de pwn</span>
+      <span class="box-info-value">{{ .Get "date" }}</span>
+    </div>
+    {{ if .Get "tags" }}
+    <div class="box-info-item box-info-tags">
+      <span class="box-info-label">Skills</span>
+      <span class="box-info-value">{{ .Get "tags" }}</span>
+    </div>
+    {{ end }}
+  </div>
+</div>
